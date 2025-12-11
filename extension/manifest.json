@@ -1,0 +1,18 @@
+{
+  "name": "LinkedIn Reply Assistant",
+  "description": "Generate AI-powered replies to LinkedIn posts from highlighted text.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "permissions": ["contextMenus", "activeTab", "storage", "scripting"],
+  "host_permissions": ["https://www.linkedin.com/*", "http://localhost:3000/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
