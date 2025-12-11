@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://localhost:3000';
+const BACKEND_URL = 'https://li-comments.onrender.com';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
